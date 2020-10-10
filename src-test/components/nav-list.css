@@ -1,0 +1,10 @@
+.activeClass{
+	color: red !important;
+}
+.nav{
+	    padding: 8px 12px;
+	    display: inline-block;
+	    background: #ddd;
+	    border-radius: 6px;
+	    margin-right: 12px;
+}
