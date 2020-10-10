@@ -2,18 +2,18 @@
     width: 100%;
     box-sizing: border-box;
     padding: 0 50px;
-    background: #ffeaef;
+    background: #E1E0C7;
 }
 .about-box{
-    border-left: 4px solid #bdd7df;
-    border-right: 4px solid #bdd7df;
+    border-left: 4px solid #ced783;
+    border-right: 4px solid #ced783;
 }
 .about-tit{
     text-align: center;
     padding: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #00efb7;
+    background: #b2b581;
     font-size: 18px;
     font-weight: 600;
 }
@@ -22,15 +22,25 @@
     padding: 10px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background: #e69090;
+    background: #c6ca95;
 }
 .about-introduce div{
-    text-align: right;
+    text-align: center;
     margin: 0 0 10px 0;
     font-size: 12px;
+    font-weight: 600;
 }
 .about-introduce p{
     margin: 0;
+}
+.about-chapter{
+    margin: 10px 10px 0;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #000;
+    text-align: center;
+    color: #fff;
 }
 .about-cen{
     padding: 20px 10px;
@@ -60,9 +70,9 @@
     width: 80%;
 }
 .about-model.centre p{
-    background: #000;
-    color: #fff;
+    background: #b3b869;
     width: 100%;
+    color: #000;
 }
 .about-model p{
     margin: 0;
