@@ -2,14 +2,14 @@ import React from 'react'
 
 import './about.css'
 
-const title= '夜灵犀传奇之邪剑黑曜'
-const m1='我的马儿子，我永远是你爹爹！'
-const m2='---六耳'
-const title1= '简介：这江湖沉寂了二十余年，终于被一位少年打破！'
-const chapter= '第一回 群雄并起'
-const title2= '十年前。。。'
-const p1= '夜灵犀说：爱你在心口难开！'
-const p2= '苏晚说：那就给老娘闭嘴！'
+const title= '123'
+const m1='123'
+const m2='123'
+const title1= '123'
+const chapter= '123'
+const title2= '123'
+const p1= '123'
+const p2= '13'
 
 // export default function About() {
 //   return <div>{title}</div>
