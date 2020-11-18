@@ -1,44 +1,33 @@
 import React from 'react'
 
 import './about.css'
+// 引入连接函数
+import {connect} from 'react-redux'
+import {increment} from '../redux/actions'
 
-const title= '123'
-const m1='123'
-const m2='123'
-const title1= '123'
-const chapter= '123'
-const title2= '123'
-const p1= '123'
-const p2= '13'
-
-// export default function About() {
-//   return <div>{title}</div>
-// }
-
-export default class About extends React.Component {
+export class About extends React.Component {
+    state={
+        count: 1
+    }
+    // 加
+    jia = () => {
+        this.props.increment(this.state.count)
+    }
   render() {
+      console.log('-',this.props.counter.count) // 修改后的值，有默认
+      console.log('-',this.state.count) // 页面定义的常量
     return (
         <div className='about-main'>
-          <div className='about-box'>
-            <div className='about-tit'>{title}</div>
-            <div className='about-introduce'>
-              <div>{m1}&nbsp;&nbsp;&nbsp;&nbsp;{m2}</div>
-              <p>{title1}</p>
-            </div>
-            <div className='about-chapter'>{chapter}</div>
-            <div className='about-cen'>
-              <div className='about-model centre'>
-                <p>{title2}</p>
-              </div>
-              <div className='about-model left'>
-                <p>{p1}</p>
-              </div>
-              <div className='about-model right'>
-                <p>{p2}</p>
-              </div>
-            </div>
-          </div>
+            <div>结果：{this.props.counter.count}</div>
+            <div>相加的数：{this.state.count}</div>
+            <button onClick={this.jia}>点击相加</button>
         </div>
     )
   }
 }
+
+// 向外暴露连接App组件的包装组件
+export default connect(
+    state => ({counter: state.counter}), // 刚进来，默认返回 0 ；执行方法后，修改值
+    {increment}
+)(About)
