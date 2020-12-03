@@ -1,28 +1,27 @@
 import React from 'react'
-import {Switch, Route, Redirect} from 'react-router-dom'
-import MyNavLink from '../components/my-nav-link'
-import News from './news'
-import Message from './message'
+import {Route, Switch, Redirect} from 'react-router-dom'
+import NavList from '../components/nav-list'
+
+import Message from '../home/message'
+import News from '../home/news'
+
+import './home.css'
 
 export default function Home() {
   return (
-    <div>
-      <h2>Home组件内容</h2>
-      <div>
-        <ul className="nav nav-tabs">
-          <li>
-            <MyNavLink to='/home/news'>News</MyNavLink>
-          </li>
-          <li>
-            <MyNavLink to="/home/message">Message</MyNavLink>
-          </li>
-        </ul>
-        <Switch>
-          <Route path='/home/news' component={News} />
-          <Route path='/home/message' component={Message} />
-          <Redirect to='/home/news'/>
-        </Switch>
-      </div>
-    </div>
-  )
+	  <div className='home-main'>
+		<div className='home-nav'>
+			<NavList to='/home/news'>news</NavList>
+			<br/>
+			<NavList to='/home/message'>message</NavList>
+		</div>
+		<div className='home-con'>
+			<Switch>
+				<Route path='/home/news' component={News}/>
+				<Route path='/home/message' component={Message}/>
+				<Redirect to='/home/news'/>
+			</Switch>
+		</div>  
+	  </div>
+	)
 }
